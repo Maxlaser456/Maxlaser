@@ -1,0 +1,31 @@
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+local Window = Library.CreateLib("MaxUi Hub v1", "BloodTheme")
+
+local Tab1 = Window:NewTab("Main")
+local Tab1Section = Tab1:NewSection("Main")
+local Tab2 = Window:NewTab("creadit maxlaser")
+local Tab2Section = Tab2:NewSection("This script by maxlaser")
+Tab1Section:NewLabel("First Gui")
+Tab1Section:NewButton("aimbot + hitbox hide", "HitBox V5 Made By WarriorRoberr", function()
+loadstring(game:httpget"https://pastebin.com/raw/3fircgxr")() 
+end)
+Tab1Section:NewButton("Lag Fixed", "HitBox V5 Made By WarriorRoberr", function()
+loadstring(game:httpget"https://pastebin.com/raw/GmpxmDHB")() 
+end)
+Tab1Section:NewButton("Inf Jumps", "Enables Inf Jumps", function()
+    local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+end)
+
+Tab1Section:NewToggle("Fov", "Changes Fov", function(state)
+    if state then
+        game.Workspace.CurrentCamera.FieldOfView = 120
+    else
+        game.Workspace.CurrentCamera.FieldOfView = 80
+    end
+end)
+local Tab1Section = Tab1:NewSection("This Script not Done")
